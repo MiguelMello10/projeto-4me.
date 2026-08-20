@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levantamento Estratégico de Alunos PCD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Levantamento de Alunos</h1>
+        
+        <!-- Formulário de Cadastro -->
+        <form id="form-aluno" class="card">
+            <h2>Cadastrar Aluno</h2>
+            
+            <div class="campo">
+                <label for="nome">Nome do Aluno:</label>
+                <input type="text" id="nome" placeholder="Digite o nome do aluno" required>
+            </div>
+
+            <div class="campo-checkbox">
+                <input type="checkbox" id="pcd">
+                <label for="pcd">Aluno possui necessidade especial (PCD)</label>
+            </div>
+
+            <button type="submit">Cadastrar Aluno</button>
+        </form>
+
+        <!-- Painel de Relatório -->
+        <div class="card relatorio">
+            <h2>Relatório Estratégico</h2>
+            <div class="metricas">
+                <div class="metrica-item">
+                    <span>Total de Alunos</span>
+                    <strong id="total-alunos">0</strong>
+                </div>
+                <div class="metrica-item">
+                    <span>Alunos PCD</span>
+                    <strong id="total-pcd">0</strong>
+                </div>
+                <div class="metrica-item">
+                    <span>Percentual PCD</span>
+                    <strong id="percentual-pcd">0.00%</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de Alunos Cadastrados -->
+        <div class="card">
+            <h2>Lista de Alunos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>PCD</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-alunos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
